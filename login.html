@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http‑equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBSE Examination Results 2025</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="cbse-header">
+    <div class="cbse-left">
+      <img src="./logo.png" alt="CBSE Logo" class="logo">
+      <div class="board-text">
+        <div class="hindi">केन्द्रीय माध्यमिक शिक्षा बोर्ड</div>
+        <div class="english">Central Board of Secondary Examinations</div>
+      </div>
+    </div>
+    <div class="cbse-url">http://cbseresults.nic.in</div>
+  </div>
+
+  <!-- Sub-header -->
+  <div class="sub-header">
+    <div class="sub-left"></div>
+    <div class="sub-right">
+      <span class="title">Examination Results 2025</span><br>
+      <span class="byline">Brought to you by National Informatics Centre</span>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="form-wrap">
+    <h3>Secondary School Examination (Class X) 2025</h3>
+    <form action="" method="get" class="result-form">
+      <table cellpadding="8">
+        <tbody><tr>
+          <td class="label-cell">Enter your Roll Number</td>
+          <td><input type="tel" name="roll" inputmode="numeric" pattern="\d*" required=""></td>
+        </tr>
+        <tr>
+          <td class="label-cell">Enter School No.</td>
+          <td><input type="tel" name="school" inputmode="numeric" pattern="\d*" required=""></td>
+        </tr>
+        <tr>
+          <td class="label-cell">Enter Date of Birth</td>
+          <td><input type="date" name="dob" required=""></td>
+        </tr>
+        <tr>
+          <td class="label-cell">Enter Admit Card ID<br><span class="hint">(as given on your admit card)</span></td>
+          <td><input type="tel" name="admit" inputmode="numeric" pattern="\d*" required=""></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="button-row">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </tbody></table>
+    </form>
+  </div>
+
+
+<img id="translator-icon" src="chrome-extension://gpahcnbjaopcgcpdjnjcmkllkcipbmjk/icons/icon-128.png" style="display: none;"><div id="translator-container" style="display: none;">
+<div class="rapid-header">
+  <img сlass="rapid-logo" src="chrome-extension://gpahcnbjaopcgcpdjnjcmkllkcipbmjk/icons/logo.svg">
+  <img сlass="rapid-icon" id="rapid-copy" src="chrome-extension://gpahcnbjaopcgcpdjnjcmkllkcipbmjk/icons/copy.svg">
+</div><div id="rapid-text-wrapper"><span></span></div>
+
+<div class="rapid-footer">
+  <span id="rapid-first-language">ENG</span>
+  <img id="rapid-arrow-icon" src="chrome-extension://gpahcnbjaopcgcpdjnjcmkllkcipbmjk/icons/r-arrow.svg">
+  <span id="rapid-second-language">FRN</span>
+</div></div></body></html>
+
+<script>
+  document.querySelector('.result-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent default form submission
+
+    const roll = encodeURIComponent(this.roll.value);
+    const school = encodeURIComponent(this.school.value);
+    const dob = encodeURIComponent(this.dob.value);
+    const admit = encodeURIComponent(this.admit.value);
+
+    const query = `result.html?roll=${roll}&school=${school}&dob=${dob}&admit=${admit}`;
+    window.location.href = query;
+  });
+</script>
